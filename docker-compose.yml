@@ -7,7 +7,7 @@ services:
     image: "abci-image"
     build: 
       context: .
-      dockerfile: init/abci.Dockerfile
+      dockerfile: init-docker/abci.Dockerfile
     depends_on:
       - server0
     environment:
@@ -22,7 +22,7 @@ services:
     image: "abci-image"
     build: 
       context: .
-      dockerfile: init/abci.Dockerfile
+      dockerfile: init-docker/abci.Dockerfile
     depends_on:
       - server1
     environment:
@@ -37,7 +37,7 @@ services:
     image: "abci-image"
     build: 
       context: .
-      dockerfile: init/abci.Dockerfile
+      dockerfile: init-docker/abci.Dockerfile
     depends_on:
       - server2
     environment:
@@ -52,7 +52,7 @@ services:
     image: "abci-image"
     build: 
       context: .
-      dockerfile: init/abci.Dockerfile
+      dockerfile: init-docker/abci.Dockerfile
     depends_on:
       - server3
     environment:
@@ -67,7 +67,7 @@ services:
     image: "abci-image"
     build: 
       context: .
-      dockerfile: init/abci.Dockerfile
+      dockerfile: init-docker/abci.Dockerfile
     depends_on:
       - server4
     environment:
@@ -82,7 +82,7 @@ services:
     image: "abci-image"
     build: 
       context: .
-      dockerfile: init/abci.Dockerfile
+      dockerfile: init-docker/abci.Dockerfile
     depends_on:
       - server5
     environment:
@@ -97,7 +97,7 @@ services:
     image: "abci-image"
     build: 
       context: .
-      dockerfile: init/abci.Dockerfile
+      dockerfile: init-docker/abci.Dockerfile
     depends_on:
       - server6
     environment:
@@ -112,7 +112,7 @@ services:
     image: "abci-image"
     build: 
       context: .
-      dockerfile: init/abci.Dockerfile
+      dockerfile: init-docker/abci.Dockerfile
     depends_on:
       - server7
     environment:
@@ -127,7 +127,7 @@ services:
     image: "abci-image"
     build: 
       context: .
-      dockerfile: init/abci.Dockerfile
+      dockerfile: init-docker/abci.Dockerfile
     depends_on:
       - server8
     environment:
@@ -142,7 +142,7 @@ services:
     image: "abci-image"
     build: 
       context: .
-      dockerfile: init/abci.Dockerfile
+      dockerfile: init-docker/abci.Dockerfile
     depends_on:
       - server9
     environment:
@@ -157,7 +157,7 @@ services:
     image: "abci-image"
     build: 
       context: .
-      dockerfile: init/abci.Dockerfile
+      dockerfile: init-docker/abci.Dockerfile
     depends_on:
       - server10
     environment:
@@ -172,7 +172,7 @@ services:
     image: "abci-image"
     build: 
       context: .
-      dockerfile: init/abci.Dockerfile
+      dockerfile: init-docker/abci.Dockerfile
     depends_on:
       - server11
     environment:
@@ -187,7 +187,7 @@ services:
     image: "abci-image"
     build: 
       context: .
-      dockerfile: init/abci.Dockerfile
+      dockerfile: init-docker/abci.Dockerfile
     depends_on:
       - server12
     environment:
@@ -202,7 +202,7 @@ services:
     image: "abci-image"
     build: 
       context: .
-      dockerfile: init/abci.Dockerfile
+      dockerfile: init-docker/abci.Dockerfile
     depends_on:
       - server13
     environment:
@@ -217,7 +217,7 @@ services:
     image: "abci-image"
     build: 
       context: .
-      dockerfile: init/abci.Dockerfile
+      dockerfile: init-docker/abci.Dockerfile
     depends_on:
       - server14
     environment:
@@ -471,7 +471,7 @@ services:
     networks:
       - localnet
     volumes:
-      - ./init/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
 
   server0:
     container_name: server0
@@ -481,7 +481,7 @@ services:
       - mysqldb0
     build: 
       context: .
-      dockerfile: init/webservice.Dockerfile
+      dockerfile: init-docker/webservice.Dockerfile
     restart: always
     env_file: ./.env
     ports:
@@ -515,7 +515,7 @@ services:
     networks:
       - localnet
     volumes:
-      - ./init/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
 
   server1:
     container_name: server1
@@ -525,7 +525,7 @@ services:
       - mysqldb1
     build: 
       context: .
-      dockerfile: init/webservice.Dockerfile
+      dockerfile: init-docker/webservice.Dockerfile
     restart: always
     env_file: ./.env
     ports:
@@ -559,7 +559,7 @@ services:
     networks:
       - localnet
     volumes:
-      - ./init/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
 
   server2:
     container_name: server2
@@ -569,7 +569,7 @@ services:
       - mysqldb2
     build: 
       context: .
-      dockerfile: init/webservice.Dockerfile
+      dockerfile: init-docker/webservice.Dockerfile
     restart: always
     env_file: ./.env
     ports:
@@ -603,7 +603,7 @@ services:
     networks:
       - localnet
     volumes:
-      - ./init/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
 
   server3:
     container_name: server3
@@ -613,7 +613,7 @@ services:
       - mysqldb3
     build: 
       context: .
-      dockerfile: init/webservice.Dockerfile
+      dockerfile: init-docker/webservice.Dockerfile
     restart: always
     env_file: ./.env
     ports:
@@ -647,7 +647,7 @@ services:
     networks:
       - localnet
     volumes:
-      - ./init/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
 
   server4:
     container_name: server4
@@ -657,7 +657,7 @@ services:
       - mysqldb4
     build: 
       context: .
-      dockerfile: init/webservice.Dockerfile
+      dockerfile: init-docker/webservice.Dockerfile
     restart: always
     env_file: ./.env
     ports:
@@ -692,7 +692,7 @@ services:
     networks:
       - localnet
     volumes:
-      - ./init/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
 
   server5:
     container_name: server5
@@ -702,7 +702,7 @@ services:
       - mysqldb5
     build: 
       context: .
-      dockerfile: init/webservice.Dockerfile
+      dockerfile: init-docker/webservice.Dockerfile
     restart: always
     env_file: ./.env
     ports:
@@ -737,7 +737,7 @@ services:
     networks:
       - localnet
     volumes:
-      - ./init/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
 
   server6:
     container_name: server6
@@ -747,7 +747,7 @@ services:
       - mysqldb6
     build: 
       context: .
-      dockerfile: init/webservice.Dockerfile
+      dockerfile: init-docker/webservice.Dockerfile
     restart: always
     env_file: ./.env
     ports:
@@ -782,7 +782,7 @@ services:
     networks:
       - localnet
     volumes:
-      - ./init/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
 
   server7:
     container_name: server7
@@ -792,7 +792,7 @@ services:
       - mysqldb7
     build: 
       context: .
-      dockerfile: init/webservice.Dockerfile
+      dockerfile: init-docker/webservice.Dockerfile
     restart: always
     env_file: ./.env
     ports:
@@ -827,7 +827,7 @@ services:
     networks:
       - localnet
     volumes:
-      - ./init/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
 
   server8:
     container_name: server8
@@ -837,7 +837,7 @@ services:
       - mysqldb8
     build: 
       context: .
-      dockerfile: init/webservice.Dockerfile
+      dockerfile: init-docker/webservice.Dockerfile
     restart: always
     env_file: ./.env
     ports:
@@ -872,7 +872,7 @@ services:
     networks:
       - localnet
     volumes:
-      - ./init/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
 
   server9:
     container_name: server9
@@ -882,7 +882,7 @@ services:
       - mysqldb9
     build: 
       context: .
-      dockerfile: init/webservice.Dockerfile
+      dockerfile: init-docker/webservice.Dockerfile
     restart: always
     env_file: ./.env
     ports:
@@ -917,7 +917,7 @@ services:
     networks:
       - localnet
     volumes:
-      - ./init/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
 
   server10:
     container_name: server10
@@ -927,7 +927,7 @@ services:
       - mysqldb10
     build: 
       context: .
-      dockerfile: init/webservice.Dockerfile
+      dockerfile: init-docker/webservice.Dockerfile
     restart: always
     env_file: ./.env
     ports:
@@ -962,7 +962,7 @@ services:
     networks:
       - localnet
     volumes:
-      - ./init/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
 
   server11:
     container_name: server11
@@ -972,7 +972,7 @@ services:
       - mysqldb11
     build: 
       context: .
-      dockerfile: init/webservice.Dockerfile
+      dockerfile: init-docker/webservice.Dockerfile
     restart: always
     env_file: ./.env
     ports:
@@ -1007,7 +1007,7 @@ services:
     networks:
       - localnet
     volumes:
-      - ./init/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
 
   server12:
     container_name: server12
@@ -1017,7 +1017,7 @@ services:
       - mysqldb12
     build: 
       context: .
-      dockerfile: init/webservice.Dockerfile
+      dockerfile: init-docker/webservice.Dockerfile
     restart: always
     env_file: ./.env
     ports:
@@ -1052,7 +1052,7 @@ services:
     networks:
       - localnet
     volumes:
-      - ./init/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
 
   server13:
     container_name: server13
@@ -1062,7 +1062,7 @@ services:
       - mysqldb13
     build: 
       context: .
-      dockerfile: init/webservice.Dockerfile
+      dockerfile: init-docker/webservice.Dockerfile
     restart: always
     env_file: ./.env
     ports:
@@ -1097,7 +1097,7 @@ services:
     networks:
       - localnet
     volumes:
-      - ./init/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
 
   server14:
     container_name: server14
@@ -1107,7 +1107,7 @@ services:
       - mysqldb14
     build: 
       context: .
-      dockerfile: init/webservice.Dockerfile
+      dockerfile: init-docker/webservice.Dockerfile
     restart: always
     env_file: ./.env
     ports:

@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+// const mysql = require('mysql');
 
 const app = express();
 
@@ -27,10 +28,6 @@ const INFO = process.env.SERVER_INFO || 0;
 app.get("/test", (req, res) => {
   res.json({ message: "Welcome to our application " + INFO});
 });
-
-// synchorized data routes
-const synchronizationRouter = require('./routes/synchronizationRoute');
-app.use('/synchronization', synchronizationRouter);
 
 // customer routes
 const customerRouter = require('./routes/customerRoute');
