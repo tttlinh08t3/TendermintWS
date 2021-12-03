@@ -16,6 +16,8 @@ USER gradle
 
 RUN ./gradlew clean
 
+RUN ./gradlew generateProto
+
 RUN ./gradlew build --no-daemon
 
 EXPOSE 26658
