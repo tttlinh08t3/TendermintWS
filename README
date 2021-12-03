@@ -43,7 +43,10 @@ localnet-start: localnet-stop build-docker-localnode
 * Go to tendermint home folder: 
     cd $TMHOME
 
-* Build the tendermint binary by running: 
+* Create 15 nodes using command: 
+    tendermint testnet --v 15
+    
+* Build the tendermint binary using command: 
     make build-linux
 
 * To start a 15-nodes testnet run: 
