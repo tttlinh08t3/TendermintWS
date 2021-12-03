@@ -31,16 +31,17 @@ In addition, it helps to set up multiple Docker containers for the web service.
 - Install Docker: https://docs.docker.com/engine/install/
 - Install Docker Compose: https://docs.docker.com/compose/install/
 
-* Copy .env file and init-docker folder in tendermint folder (e.g. $GO/src/tendermint/init-docker and $GO/src/tendermint/.env).
+* Copy .env file and init-docker folder in tendermint home folder (e.g. $TMHOME/init-docker and $TMHOME/.env).
 
-* Replace docker-compose.yml file in tendermint folder (e.g. $GO/src/tendermint/docker-compose.yml). The given docker-compose.yml file contains 15-nodes setup with ABCI application and web servers.
+* Replace docker-compose.yml file in tendermint home folder (e.g. $TMHOME/docker-compose.yml). The given docker-compose.yml file contains 15-nodes setup with ABCI application and web servers.
 
 * Change the number of nodes in the Makefile at localnet-start target (In this case, the number of nodes is 15): 
 localnet-start: localnet-stop build-docker-localnode
 	@if ! [ -f build/node0/config/genesis.json ]; then docker run --rm -v $(CURDIR)/build:/tendermint:Z tendermint/localnode testnet --config /etc/tendermint/config-template.toml --v 15 --o . --populate-persistent-peers --starting-ip-address 192.167.10.2; fi
 	docker-compose up
 
-* Go to tendermint folder
+* Go to tendermint home folder: 
+    cd $TMHOME
 
 * Build the tendermint binary by running: 
     make build-linux
