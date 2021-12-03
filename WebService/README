@@ -1,0 +1,28 @@
+
+############################# Prerequisite #############################
+* Install dependencies : npm install
+
+* MySQL database configuration:
+
+- To download the MySQL Community Edition image, run this command:
+docker pull mysql/mysql-server:latest
+
+- Deploying a new MySQL container with:
+docker run -p3306:3306 --name=mysql1 -d mysql/mysql-server:5.7
+
+- Change password: 
+docker logs mysql1 2>&1 | grep GENERATED
+docker exec -it mysql1 mysql -uroot -p then enter generated password.
+Enter new password:
+$mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
+
+- Another way to set password:
+docker run -p3306:3306 --name mysql1 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7   
+
+- create customer database: create database customerdb;
+
+############################# Run web service #############################
+To run web service: npm start or node server
+
+################# Evaluate end-to-end time delay with and without consensus #################
+Run: python test.py

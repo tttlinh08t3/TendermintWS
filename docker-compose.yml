@@ -1,0 +1,1140 @@
+version: '3'
+
+services:
+# ABCI start IP: 192.167.10.43
+  abci0:
+    container_name: abci0
+    image: "abci-image"
+    build: 
+      context: .
+      dockerfile: init-docker/abci.Dockerfile
+    depends_on:
+      - server0
+    environment:
+      - WS_BASE_URL=$WS_BASE_URL_0
+      - SERVER_INFO=$SERVER_INFO_0
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.43
+
+  abci1:
+    container_name: abci1
+    image: "abci-image"
+    build: 
+      context: .
+      dockerfile: init-docker/abci.Dockerfile
+    depends_on:
+      - server1
+    environment:
+      - WS_BASE_URL=$WS_BASE_URL_1
+      - SERVER_INFO=$SERVER_INFO_1
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.44
+
+  abci2:
+    container_name: abci2
+    image: "abci-image"
+    build: 
+      context: .
+      dockerfile: init-docker/abci.Dockerfile
+    depends_on:
+      - server2
+    environment:
+      - WS_BASE_URL=$WS_BASE_URL_2
+      - SERVER_INFO=$SERVER_INFO_2
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.45
+
+  abci3:
+    container_name: abci3
+    image: "abci-image"
+    build: 
+      context: .
+      dockerfile: init-docker/abci.Dockerfile
+    depends_on:
+      - server3
+    environment:
+      - WS_BASE_URL=$WS_BASE_URL_3
+      - SERVER_INFO=$SERVER_INFO_3
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.46
+
+  abci4:
+    container_name: abci4
+    image: "abci-image"
+    build: 
+      context: .
+      dockerfile: init-docker/abci.Dockerfile
+    depends_on:
+      - server4
+    environment:
+      - WS_BASE_URL=$WS_BASE_URL_4
+      - SERVER_INFO=$SERVER_INFO_4
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.47
+
+  abci5:
+    container_name: abci5
+    image: "abci-image"
+    build: 
+      context: .
+      dockerfile: init-docker/abci.Dockerfile
+    depends_on:
+      - server5
+    environment:
+      - WS_BASE_URL=$WS_BASE_URL_5
+      - SERVER_INFO=$SERVER_INFO_5
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.48
+
+  abci6:
+    container_name: abci6
+    image: "abci-image"
+    build: 
+      context: .
+      dockerfile: init-docker/abci.Dockerfile
+    depends_on:
+      - server6
+    environment:
+      - WS_BASE_URL=$WS_BASE_URL_6
+      - SERVER_INFO=$SERVER_INFO_6
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.49
+
+  abci7:
+    container_name: abci7
+    image: "abci-image"
+    build: 
+      context: .
+      dockerfile: init-docker/abci.Dockerfile
+    depends_on:
+      - server7
+    environment:
+      - WS_BASE_URL=$WS_BASE_URL_7
+      - SERVER_INFO=$SERVER_INFO_7
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.50
+
+  abci8:
+    container_name: abci8
+    image: "abci-image"
+    build: 
+      context: .
+      dockerfile: init-docker/abci.Dockerfile
+    depends_on:
+      - server8
+    environment:
+      - WS_BASE_URL=$WS_BASE_URL_8
+      - SERVER_INFO=$SERVER_INFO_8
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.51
+
+  abci9:
+    container_name: abci9
+    image: "abci-image"
+    build: 
+      context: .
+      dockerfile: init-docker/abci.Dockerfile
+    depends_on:
+      - server9
+    environment:
+      - WS_BASE_URL=$WS_BASE_URL_9
+      - SERVER_INFO=$SERVER_INFO_9
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.52
+
+  abci10:
+    container_name: abci10
+    image: "abci-image"
+    build: 
+      context: .
+      dockerfile: init-docker/abci.Dockerfile
+    depends_on:
+      - server10
+    environment:
+      - WS_BASE_URL=$WS_BASE_URL_10
+      - SERVER_INFO=$SERVER_INFO_10
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.53
+  
+  abci11:
+    container_name: abci11
+    image: "abci-image"
+    build: 
+      context: .
+      dockerfile: init-docker/abci.Dockerfile
+    depends_on:
+      - server11
+    environment:
+      - WS_BASE_URL=$WS_BASE_URL_11
+      - SERVER_INFO=$SERVER_INFO_11
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.54
+
+  abci12:
+    container_name: abci12
+    image: "abci-image"
+    build: 
+      context: .
+      dockerfile: init-docker/abci.Dockerfile
+    depends_on:
+      - server12
+    environment:
+      - WS_BASE_URL=$WS_BASE_URL_12
+      - SERVER_INFO=$SERVER_INFO_12
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.55
+  
+  abci13:
+    container_name: abci13
+    image: "abci-image"
+    build: 
+      context: .
+      dockerfile: init-docker/abci.Dockerfile
+    depends_on:
+      - server13
+    environment:
+      - WS_BASE_URL=$WS_BASE_URL_13
+      - SERVER_INFO=$SERVER_INFO_13
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.56
+  
+  abci14:
+    container_name: abci14
+    image: "abci-image"
+    build: 
+      context: .
+      dockerfile: init-docker/abci.Dockerfile
+    depends_on:
+      - server14
+    environment:
+      - WS_BASE_URL=$WS_BASE_URL_14
+      - SERVER_INFO=$SERVER_INFO_14
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.57
+                
+# Node start IP: 192.167.10.2 
+  node0:
+    container_name: node0
+    image: "tendermint/localnode"
+    ports:
+      - "26656-26657:26656-26657"
+      - "6060:6060"
+      - "27000:26660"
+    environment:
+      - ID=0
+      - LOG=${LOG:-tendermint.log}
+    volumes:
+      - ./build:/tendermint:Z
+    command: node --abci grpc --proxy_app=tcp://abci0:26658 --consensus.create_empty_blocks=false
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.2
+
+  node1:
+    container_name: node1
+    image: "tendermint/localnode"
+    ports:
+      - "26659-26660:26656-26657"
+    environment:
+      - ID=1
+      - LOG=${LOG:-tendermint.log}
+    volumes:
+      - ./build:/tendermint:Z
+    command: node --abci grpc --proxy_app=tcp://abci1:26658 --consensus.create_empty_blocks=false
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.3
+
+  node2:
+    container_name: node2
+    image: "tendermint/localnode"
+    environment:
+      - ID=2
+      - LOG=${LOG:-tendermint.log}
+    ports:
+      - "26661-26662:26656-26657"
+    volumes:
+      - ./build:/tendermint:Z
+    command: node --abci grpc --proxy_app=tcp://abci2:26658 --consensus.create_empty_blocks=false
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.4
+
+  node3:
+    container_name: node3
+    image: "tendermint/localnode"
+    environment:
+      - ID=3
+      - LOG=${LOG:-tendermint.log}
+    ports:
+      - "26663-26664:26656-26657"
+    volumes:
+      - ./build:/tendermint:Z
+    command: node --abci grpc --proxy_app=tcp://abci3:26658 --consensus.create_empty_blocks=false
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.5
+
+  node4:
+    container_name: node4
+    image: "tendermint/localnode"
+    environment:
+      - ID=4
+      - LOG=${LOG:-tendermint.log}
+    ports:
+      - "26665-26666:26656-26657"
+    volumes:
+      - ./build:/tendermint:Z
+    command: node --abci grpc --proxy_app=tcp://abci4:26658 --consensus.create_empty_blocks=false
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.6
+
+  node5:
+    container_name: node5
+    image: "tendermint/localnode"
+    environment:
+      - ID=5
+      - LOG=${LOG:-tendermint.log}
+    ports:
+      - "26667-26668:26656-26657"
+    volumes:
+      - ./build:/tendermint:Z
+    command: node --abci grpc --proxy_app=tcp://abci5:26658 --consensus.create_empty_blocks=false
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.7
+
+  node6:
+    container_name: node6
+    image: "tendermint/localnode"
+    environment:
+      - ID=6
+      - LOG=${LOG:-tendermint.log}
+    ports:
+      - "26669-26670:26656-26657"
+    volumes:
+      - ./build:/tendermint:Z
+    command: node --abci grpc --proxy_app=tcp://abci6:26658 --consensus.create_empty_blocks=false
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.8
+
+  node7:
+    container_name: node7
+    image: "tendermint/localnode"
+    environment:
+      - ID=7
+      - LOG=${LOG:-tendermint.log}
+    ports:
+      - "26671-26672:26656-26657"
+    volumes:
+      - ./build:/tendermint:Z
+    command: node --abci grpc --proxy_app=tcp://abci7:26658 --consensus.create_empty_blocks=false
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.9
+
+  node8:
+    container_name: node8
+    image: "tendermint/localnode"
+    environment:
+      - ID=8
+      - LOG=${LOG:-tendermint.log}
+    ports:
+      - "26673-26674:26656-26657"
+    volumes:
+      - ./build:/tendermint:Z
+    command: node --abci grpc --proxy_app=tcp://abci8:26658 --consensus.create_empty_blocks=false
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.10
+
+  node9:
+    container_name: node9
+    image: "tendermint/localnode"
+    environment:
+      - ID=9
+      - LOG=${LOG:-tendermint.log}
+    ports:
+      - "26675-26676:26656-26657"
+    volumes:
+      - ./build:/tendermint:Z
+    command: node --abci grpc --proxy_app=tcp://abci9:26658 --consensus.create_empty_blocks=false
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.11
+  
+  node10:
+    container_name: node10
+    image: "tendermint/localnode"
+    environment:
+      - ID=10
+      - LOG=${LOG:-tendermint.log}
+    ports:
+      - "26677-26678:26656-26657"
+    volumes:
+      - ./build:/tendermint:Z
+    command: node --abci grpc --proxy_app=tcp://abci10:26658 --consensus.create_empty_blocks=false
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.12
+
+  node11:
+    container_name: node11
+    image: "tendermint/localnode"
+    environment:
+      - ID=11
+      - LOG=${LOG:-tendermint.log}
+    ports:
+      - "26679-26680:26656-26657"
+    volumes:
+      - ./build:/tendermint:Z
+    command: node --abci grpc --proxy_app=tcp://abci11:26658 --consensus.create_empty_blocks=false
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.13
+  
+  node12:
+    container_name: node12
+    image: "tendermint/localnode"
+    environment:
+      - ID=12
+      - LOG=${LOG:-tendermint.log}
+    ports:
+      - "26681-26682:26656-26657"
+    volumes:
+      - ./build:/tendermint:Z
+    command: node --abci grpc --proxy_app=tcp://abci12:26658 --consensus.create_empty_blocks=false
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.14
+
+  node13:
+    container_name: node13
+    image: "tendermint/localnode"
+    environment:
+      - ID=13
+      - LOG=${LOG:-tendermint.log}
+    ports:
+      - "26683-26684:26656-26657"
+    volumes:
+      - ./build:/tendermint:Z
+    command: node --abci grpc --proxy_app=tcp://abci13:26658 --consensus.create_empty_blocks=false
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.15
+
+  node14:
+    container_name: node14
+    image: "tendermint/localnode"
+    environment:
+      - ID=14
+      - LOG=${LOG:-tendermint.log}
+    ports:
+      - "26685-26686:26656-26657"
+    volumes:
+      - ./build:/tendermint:Z
+    command: node --abci grpc --proxy_app=tcp://abci14:26658 --consensus.create_empty_blocks=false
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.16
+
+# Server start IP: 192.167.10.22 
+  mysqldb0:
+    container_name: mysqldb0
+    image: mysql:5.7
+    restart: always
+    env_file: ./.env
+    environment:
+      - MYSQLDB_USER=$MYSQLDB_USER
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+    ports:
+      - $MYSQLDB_LOCAL_PORT_0:$MYSQLDB_DOCKER_PORT
+    networks:
+      - localnet
+    volumes:
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+
+  server0:
+    container_name: server0
+    image: server
+    depends_on:
+      - node0
+      - mysqldb0
+    build: 
+      context: .
+      dockerfile: init-docker/webservice.Dockerfile
+    restart: always
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT_0:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=mysqldb0
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+      - TENDERMINT_URL=$TENDERMINT_URL_0
+      - SERVER_INFO=$SERVER_INFO_0
+    stdin_open: true
+    tty: true
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.22
+
+  mysqldb1:
+    container_name: mysqldb1
+    image: mysql:5.7
+    restart: always
+    env_file: ./.env
+    environment:
+      - MYSQLDB_USER=$MYSQLDB_USER
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+    ports:
+      - $MYSQLDB_LOCAL_PORT_1:$MYSQLDB_DOCKER_PORT
+    networks:
+      - localnet
+    volumes:
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+
+  server1:
+    container_name: server1
+    image: server
+    depends_on:
+      - node1
+      - mysqldb1
+    build: 
+      context: .
+      dockerfile: init-docker/webservice.Dockerfile
+    restart: always
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT_1:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=mysqldb1
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+      - TENDERMINT_URL=$TENDERMINT_URL_1
+      - SERVER_INFO=$SERVER_INFO_1
+    stdin_open: true
+    tty: true
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.23
+
+  mysqldb2:
+    container_name: mysqldb2
+    image: mysql:5.7
+    restart: always
+    env_file: ./.env
+    environment:
+      - MYSQLDB_USER=$MYSQLDB_USER
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+    ports:
+      - $MYSQLDB_LOCAL_PORT_2:$MYSQLDB_DOCKER_PORT
+    networks:
+      - localnet
+    volumes:
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+
+  server2:
+    container_name: server2
+    image: server
+    depends_on:
+      - node2
+      - mysqldb2
+    build: 
+      context: .
+      dockerfile: init-docker/webservice.Dockerfile
+    restart: always
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT_2:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=mysqldb2
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+      - TENDERMINT_URL=$TENDERMINT_URL_2
+      - SERVER_INFO=$SERVER_INFO_2
+    stdin_open: true
+    tty: true
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.24
+  
+  mysqldb3:
+    container_name: mysqldb3
+    image: mysql:5.7
+    restart: always
+    env_file: ./.env
+    environment:
+      - MYSQLDB_USER=$MYSQLDB_USER
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+    ports:
+      - $MYSQLDB_LOCAL_PORT_3:$MYSQLDB_DOCKER_PORT
+    networks:
+      - localnet
+    volumes:
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+
+  server3:
+    container_name: server3
+    image: server
+    depends_on:
+      - node3
+      - mysqldb3
+    build: 
+      context: .
+      dockerfile: init-docker/webservice.Dockerfile
+    restart: always
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT_3:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=mysqldb3
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+      - TENDERMINT_URL=$TENDERMINT_URL_3
+      - SERVER_INFO=$SERVER_INFO_3
+    stdin_open: true
+    tty: true
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.25
+
+  mysqldb4:
+    container_name: mysqldb4
+    image: mysql:5.7
+    restart: always
+    env_file: ./.env
+    environment:
+      - MYSQLDB_USER=$MYSQLDB_USER
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+    ports:
+      - $MYSQLDB_LOCAL_PORT_4:$MYSQLDB_DOCKER_PORT
+    networks:
+      - localnet
+    volumes:
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+
+  server4:
+    container_name: server4
+    image: server
+    depends_on:
+      - node4
+      - mysqldb4
+    build: 
+      context: .
+      dockerfile: init-docker/webservice.Dockerfile
+    restart: always
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT_4:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=mysqldb4
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+      - TENDERMINT_URL=$TENDERMINT_URL_4
+      - SERVER_INFO=$SERVER_INFO_4
+    stdin_open: true
+    tty: true
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.26
+
+#### Server 5
+  mysqldb5:
+    container_name: mysqldb5
+    image: mysql:5.7
+    restart: always
+    env_file: ./.env
+    environment:
+      - MYSQLDB_USER=$MYSQLDB_USER
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+    ports:
+      - $MYSQLDB_LOCAL_PORT_5:$MYSQLDB_DOCKER_PORT
+    networks:
+      - localnet
+    volumes:
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+
+  server5:
+    container_name: server5
+    image: server
+    depends_on:
+      - node5
+      - mysqldb5
+    build: 
+      context: .
+      dockerfile: init-docker/webservice.Dockerfile
+    restart: always
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT_5:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=mysqldb5
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+      - TENDERMINT_URL=$TENDERMINT_URL_5
+      - SERVER_INFO=$SERVER_INFO_5
+    stdin_open: true
+    tty: true
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.27
+
+#### Server 6
+  mysqldb6:
+    container_name: mysqldb6
+    image: mysql:5.7
+    restart: always
+    env_file: ./.env
+    environment:
+      - MYSQLDB_USER=$MYSQLDB_USER
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+    ports:
+      - $MYSQLDB_LOCAL_PORT_6:$MYSQLDB_DOCKER_PORT
+    networks:
+      - localnet
+    volumes:
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+
+  server6:
+    container_name: server6
+    image: server
+    depends_on:
+      - node6
+      - mysqldb6
+    build: 
+      context: .
+      dockerfile: init-docker/webservice.Dockerfile
+    restart: always
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT_6:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=mysqldb6
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+      - TENDERMINT_URL=$TENDERMINT_URL_6
+      - SERVER_INFO=$SERVER_INFO_6
+    stdin_open: true
+    tty: true
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.28
+
+#### Server 7
+  mysqldb7:
+    container_name: mysqldb7
+    image: mysql:5.7
+    restart: always
+    env_file: ./.env
+    environment:
+      - MYSQLDB_USER=$MYSQLDB_USER
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+    ports:
+      - $MYSQLDB_LOCAL_PORT_7:$MYSQLDB_DOCKER_PORT
+    networks:
+      - localnet
+    volumes:
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+
+  server7:
+    container_name: server7
+    image: server
+    depends_on:
+      - node7
+      - mysqldb7
+    build: 
+      context: .
+      dockerfile: init-docker/webservice.Dockerfile
+    restart: always
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT_7:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=mysqldb7
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+      - TENDERMINT_URL=$TENDERMINT_URL_7
+      - SERVER_INFO=$SERVER_INFO_7
+    stdin_open: true
+    tty: true
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.29
+
+#### Server 8
+  mysqldb8:
+    container_name: mysqldb8
+    image: mysql:5.7
+    restart: always
+    env_file: ./.env
+    environment:
+      - MYSQLDB_USER=$MYSQLDB_USER
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+    ports:
+      - $MYSQLDB_LOCAL_PORT_8:$MYSQLDB_DOCKER_PORT
+    networks:
+      - localnet
+    volumes:
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+
+  server8:
+    container_name: server8
+    image: server
+    depends_on:
+      - node8
+      - mysqldb8
+    build: 
+      context: .
+      dockerfile: init-docker/webservice.Dockerfile
+    restart: always
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT_8:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=mysqldb8
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+      - TENDERMINT_URL=$TENDERMINT_URL_8
+      - SERVER_INFO=$SERVER_INFO_8
+    stdin_open: true
+    tty: true
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.30
+
+#### Server 9
+  mysqldb9:
+    container_name: mysqldb9
+    image: mysql:5.7
+    restart: always
+    env_file: ./.env
+    environment:
+      - MYSQLDB_USER=$MYSQLDB_USER
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+    ports:
+      - $MYSQLDB_LOCAL_PORT_9:$MYSQLDB_DOCKER_PORT
+    networks:
+      - localnet
+    volumes:
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+
+  server9:
+    container_name: server9
+    image: server
+    depends_on:
+      - node9
+      - mysqldb9
+    build: 
+      context: .
+      dockerfile: init-docker/webservice.Dockerfile
+    restart: always
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT_9:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=mysqldb9
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+      - TENDERMINT_URL=$TENDERMINT_URL_9
+      - SERVER_INFO=$SERVER_INFO_9
+    stdin_open: true
+    tty: true
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.31
+
+#### Server 10
+  mysqldb10:
+    container_name: mysqldb10
+    image: mysql:5.7
+    restart: always
+    env_file: ./.env
+    environment:
+      - MYSQLDB_USER=$MYSQLDB_USER
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+    ports:
+      - $MYSQLDB_LOCAL_PORT_10:$MYSQLDB_DOCKER_PORT
+    networks:
+      - localnet
+    volumes:
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+
+  server10:
+    container_name: server10
+    image: server
+    depends_on:
+      - node10
+      - mysqldb10
+    build: 
+      context: .
+      dockerfile: init-docker/webservice.Dockerfile
+    restart: always
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT_10:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=mysqldb10
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+      - TENDERMINT_URL=$TENDERMINT_URL_10
+      - SERVER_INFO=$SERVER_INFO_10
+    stdin_open: true
+    tty: true
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.32
+        
+#### Server 11
+  mysqldb11:
+    container_name: mysqldb11
+    image: mysql:5.7
+    restart: always
+    env_file: ./.env
+    environment:
+      - MYSQLDB_USER=$MYSQLDB_USER
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+    ports:
+      - $MYSQLDB_LOCAL_PORT_11:$MYSQLDB_DOCKER_PORT
+    networks:
+      - localnet
+    volumes:
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+
+  server11:
+    container_name: server11
+    image: server
+    depends_on:
+      - node11
+      - mysqldb11
+    build: 
+      context: .
+      dockerfile: init-docker/webservice.Dockerfile
+    restart: always
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT_11:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=mysqldb11
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+      - TENDERMINT_URL=$TENDERMINT_URL_11
+      - SERVER_INFO=$SERVER_INFO_11
+    stdin_open: true
+    tty: true
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.33
+
+#### Server 12
+  mysqldb12:
+    container_name: mysqldb12
+    image: mysql:5.7
+    restart: always
+    env_file: ./.env
+    environment:
+      - MYSQLDB_USER=$MYSQLDB_USER
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+    ports:
+      - $MYSQLDB_LOCAL_PORT_12:$MYSQLDB_DOCKER_PORT
+    networks:
+      - localnet
+    volumes:
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+
+  server12:
+    container_name: server12
+    image: server
+    depends_on:
+      - node12
+      - mysqldb12
+    build: 
+      context: .
+      dockerfile: init-docker/webservice.Dockerfile
+    restart: always
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT_12:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=mysqldb12
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+      - TENDERMINT_URL=$TENDERMINT_URL_12
+      - SERVER_INFO=$SERVER_INFO_12
+    stdin_open: true
+    tty: true
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.34
+
+#### Server 13
+  mysqldb13:
+    container_name: mysqldb13
+    image: mysql:5.7
+    restart: always
+    env_file: ./.env
+    environment:
+      - MYSQLDB_USER=$MYSQLDB_USER
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+    ports:
+      - $MYSQLDB_LOCAL_PORT_13:$MYSQLDB_DOCKER_PORT
+    networks:
+      - localnet
+    volumes:
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+
+  server13:
+    container_name: server13
+    image: server
+    depends_on:
+      - node13
+      - mysqldb13
+    build: 
+      context: .
+      dockerfile: init-docker/webservice.Dockerfile
+    restart: always
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT_13:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=mysqldb13
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+      - TENDERMINT_URL=$TENDERMINT_URL_13
+      - SERVER_INFO=$SERVER_INFO_13
+    stdin_open: true
+    tty: true
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.35
+
+#### Server 14
+  mysqldb14:
+    container_name: mysqldb14
+    image: mysql:5.7
+    restart: always
+    env_file: ./.env
+    environment:
+      - MYSQLDB_USER=$MYSQLDB_USER
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+    ports:
+      - $MYSQLDB_LOCAL_PORT_14:$MYSQLDB_DOCKER_PORT
+    networks:
+      - localnet
+    volumes:
+      - ./init-docker/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+
+  server14:
+    container_name: server14
+    image: server
+    depends_on:
+      - node14
+      - mysqldb14
+    build: 
+      context: .
+      dockerfile: init-docker/webservice.Dockerfile
+    restart: always
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT_14:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=mysqldb14
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+      - TENDERMINT_URL=$TENDERMINT_URL_14
+      - SERVER_INFO=$SERVER_INFO_14
+    stdin_open: true
+    tty: true
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.36
+                
+volumes: 
+  db:
+        
+networks:
+  localnet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      -
+        subnet: 192.167.10.0/16
+
