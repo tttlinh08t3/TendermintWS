@@ -9,7 +9,7 @@ This Tendermint ABCI application verifies and logs transactions from web service
 * How to start the Tendermint ABCI application (The application listens on 26658)
 ./gradlew run
 
-2. WebService: cAPIs integrated Tendermint consensus, written by JavaScript
+2. webservice: APIs integrated Tendermint consensus, written by JavaScript
 * Install dependencies : npm install
 
 * To run web service: npm start or node server
@@ -19,7 +19,9 @@ This Tendermint ABCI application verifies and logs transactions from web service
 - webservice.Dockerfile: to build web service image.
 - init-script.sql: to initialize database for each web server.
 
-4. docker-compose.yml: Create 15 nodes network in tendermint.
+4. docker-compose.yml: The default docker-compose.yml file is provided by Tendermint with a 4-nodes setup.
+This file has been modified to launch 15 nodes-testnet associated with cutomsized ABCI application.
+In addition, it helps to set up multiple Docker containers for the web service. 
 
 5. testWS: python files to evaluate the end-to-end delay when calling POST/GET APIs.
 
@@ -29,14 +31,16 @@ This Tendermint ABCI application verifies and logs transactions from web service
 - Install Docker: https://docs.docker.com/engine/install/
 - Install Docker Compose: https://docs.docker.com/compose/install/
 
-* Copy .env file and init-docker folder in setup tendermint folder (e.g. $GO/src/tendermint/init-docker and $GO/src/tendermint/.env).
+* Copy .env file and init-docker folder in tendermint folder (e.g. $GO/src/tendermint/init-docker and $GO/src/tendermint/.env).
 
-* Replace docker-compose.yml file in setup tendermint folder (e.g. $GO/src/tendermint/docker-compose.yml). The given docker-compose.yml file contains 15-nodes setup with ABCI application and web servers.
+* Replace docker-compose.yml file in tendermint folder (e.g. $GO/src/tendermint/docker-compose.yml). The given docker-compose.yml file contains 15-nodes setup with ABCI application and web servers.
 
 * Change the number of nodes in the Makefile at localnet-start target (In this case, the number of nodes is 15): 
 localnet-start: localnet-stop build-docker-localnode
 	@if ! [ -f build/node0/config/genesis.json ]; then docker run --rm -v $(CURDIR)/build:/tendermint:Z tendermint/localnode testnet --config /etc/tendermint/config-template.toml --v 15 --o . --populate-persistent-peers --starting-ip-address 192.167.10.2; fi
 	docker-compose up
+
+* Go to tendermint folder
 
 * Build the tendermint binary by running: 
     make build-linux
